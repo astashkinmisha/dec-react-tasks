@@ -1,7 +1,7 @@
 import {useEffect, useState} from "react";
 import Post from "./Post";
 
-export default function Posts(){
+export default function Posts() {
 
     const [posts, setPosts] = useState([]);
     useEffect(() => {
@@ -10,14 +10,13 @@ export default function Posts(){
             .then(value => setPosts(value))
     }, []);
 
+    return (
+        <div>
+            {
+                posts.map(post => <Post key={post.id} post={post}/>)
+            }
 
-return(
-<div>
-    {
-        posts.map(post => <Post key={post.id} post={post}/>)
-    }
+        </div>
 
-</div>
-
-);
+    );
 };

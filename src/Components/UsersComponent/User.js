@@ -1,11 +1,11 @@
 export default function User({user}) {
-    let {id,name,username,email} = user;
+    let {id, name, username, email} = user;
 
-    return(
+    return (
         <div>
             {
-               <p>id-  {id} - {email}
-               name- {name} username- {username} </p>
+                <p>id- {id} - {email}
+                    name- {name} username- {username} </p>
             }
         </div>
     );
