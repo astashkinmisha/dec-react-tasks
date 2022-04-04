@@ -3,13 +3,13 @@ import FilteredLaunches from "./FilteredLaunches";
 
 export default function LaunchComponent(){
 
-    let [launches, setLaunches] = useState([]);
+    const [launches, setLaunches] = useState([]);
     useEffect(() => {
         fetch('https://api.spacexdata.com/v3/launches/')
             .then(value => value.json())
             .then(value => setLaunches(value))
 
-    }, [])
+    }, []);
 
 return(
 <div>
@@ -24,5 +24,4 @@ return(
     }
 </div>
 
-)
-}
+)};
