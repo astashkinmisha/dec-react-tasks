@@ -8,5 +8,5 @@ export default function User({user}) {
                name- {name} username- {username} </p>
             }
         </div>
-    )
-}
+    );
+};
