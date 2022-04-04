@@ -15,10 +15,12 @@ return(
 <div>
     {
         launches.map(launch => {
+            console.log(launch);
             if (launch.launch_year <= 2019){
                return  <FilteredLaunches key={launch.flight_number} launch={launch}/>
             }
         })
+
     }
 </div>
 
